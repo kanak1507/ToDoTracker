@@ -52,15 +52,6 @@ https://kanak1507.github.io/ToDoTracker/
 | LocalStorage | Data persistence |
 
 ---
-Task-Tracker/
-│
-├── index.html
-├── style.css
-├── script.js
-└── README.md
-
-
----
 
 ## 🧠 Concepts Practiced
 
@@ -107,4 +98,3 @@ HTML • CSS • JavaScript • Git • GitHub
 ---
 
 ⭐ If you like this project, feel free to star the repository!
-## 📂 Project Structure
