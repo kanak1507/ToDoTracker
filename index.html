@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO list</title>
+    <link rel = "stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class = "main-content">
+    <header>
+      <h1>To-Do-List</h1>
+    </header>
+    <section id = "dashboardID" class="dashboard">
+      <div class="dashboard-card" id = cardBlue>
+        <h3>Total Tasks</h3>
+        <p id="totalTasks">0</p>
+      </div>
+      <div class="dashboard-card" id = cardRed>
+        <h3>Pending</h3>
+        <p id="pendingTasks">0</p>
+      </div>
+      <div class="dashboard-card" id = cardGreen>
+        <h3>Completed</h3>
+        <p id="completedTasks">0</p>
+      </div>
+    </section>
+    <section id = "controlID" class="controls">
+        <input type="text" placeholder="Search Task..." id="searchInput">
+        <select id="statusFilter">
+          <option value="all">All Status</option>
+          <option value="not-started">Not Started</option>
+          <option value="in-progress">In Progress</option>
+          <option value="completed">Completed</option>
+        </select>
+        <select id="priorityFilter">
+          <option value="all">All Priority</option>
+          <option value="high">High</option>
+          <option value="medium">Medium</option>
+          <option value="low">Low</option>
+        </select>
+        <button type="button" id="addBtn">+ Add Task</button>
+    </section>
+    <section class="addTaskForm" id="taskFormSection">
+        <form id="taskForm">
+          <label for="taskName">Task Name</label>
+          <input type="text" id="taskName" name="taskName" required placeholder="E.g. create a report" />
+          <label for="priority">Priority</label>
+          <select id="priority" name="priority" required>
+              <option value="">Select priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+          </select>
+          <label for="status">Status</label>
+          <select id="status" name="status" required>
+              <option value="" selected disabled>Select Status</option>
+              <option value="not-started">Not Started</option>
+              <option value="in-progress">In progress</option>
+              <option value="completed">Completed</option>
+          </select>
+          <button id = "saveBtn" type="submit">Save Task</button>
+          <button id = "resetBtn" type="reset">Cancel</button>
+        </form>
+    </section>
+    <section class = "ActiveTask">
+    <h2 id = "activeToggle">▼ Active Tasks</h2>
+    <div class = "table-wrapper" id = "activeWrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>Task Name</th>
+              <th>Priority</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id = "taskTableBody">
+        </tbody>
+      </table>
+      </div>
+    </section>
+    <section class = "completedTask">
+      <h2 id="completedToggle">▼ Completed Tasks</h2>
+      <div class = "table-wrapper" id = "completedWrapper">
+      <table>
+          <thead>
+            <tr>
+                <th>Task Name</th>
+                <th>Priority</th>
+                <th>Status</th>
+                <th>Action</th>
+            </tr>
+          </thead>
+          <tbody id="completedTaskTableBody">
+          </tbody>
+      </table>
+      </div>
+    </section>
+    </div>
+    <script src = "script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,409 @@
+/*General*/
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background: linear-gradient( 135deg, #fff4e6, #fffdf7, #f3f8ff, #f6f1ff);
+    margin:5px;
+    color:rgb(35, 37, 40);
+    font-family: 'Inter';
+}
+.main-content{
+    width:100%;
+    max-width:1200px;
+    margin: 0 auto;
+    padding:15px;
+}
+header{
+    padding:12px 18px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+header h1{
+    font-size:1.6rem;
+}
+.dashboard{
+    display:flex;
+    justify-content:flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    padding:10px;
+    margin:20px 0;
+}
+.dashboard-card{
+    padding:12px;
+    margin-right: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    flex-direction:column;
+    max-width: 300px;  
+    flex:1;
+    gap:10px;
+    transition: 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(135, 144, 188, 0.1), 0 2px 4px -1px rgba(128, 126, 228, 0.06);
+}
+.dashboard-card h3{
+    font-size: 1rem;
+    font-weight:500;
+    color:rgb(2, 1, 13);
+}
+.dashboard-card p{
+    font-size: 1.8rem;
+    font-weight:700;
+}
+.dashboard-card:hover{
+    transform:translateY(-8px);
+    box-shadow:0 18px 35px rgba(0,0,0,.12);
+}
+#cardBlue{
+    background:white;
+    color:#3b82f6
+}
+#cardBlue:hover{
+    background:#3b82f6;
+    color:white;
+}
+#cardRed{
+    background:white;
+    color:#f63b3b
+}
+#cardRed:hover{
+    background:#f63b3b;
+    color:white;
+}
+#cardGreen{
+    background:white;
+    color:#1d8435
+}
+#cardGreen:hover{
+    background:#1d8435;
+    color:white;
+}
+.controls{
+    display: flex;
+    justify-content:flex-start;
+    align-items:center;
+    gap:10px;
+    flex-wrap:wrap;
+}
+.controls #addBtn{
+    padding:8px 14px;
+    border:1px solid black;
+    border-radius:12px;
+    background-color:rgb(34, 56, 255);
+    color:white;
+    font-size:0.9rem;
+    font-weight:600;
+    cursor:pointer;
+    transition: background-color 0.2s ease;
+}
+.controls #addBtn:hover{
+    background-color: rgb(0, 20, 200);
+}
+#searchInput{
+    width:220px;
+    padding:8px 12px;
+    border:1px solid black;
+    border-radius:12px;
+    font-size:1rem;
+}
+#searchInput:focus{
+   outline:none;
+   box-shadow:1px solid rgb(57, 57, 55);
+}  
+#statusFilter,
+#priorityFilter{
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: white;
+    color: #333;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.addTaskForm{
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 18px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+#taskForm{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+#taskForm label{
+  font-weight: 600;
+  color: #333;
+}
+#taskForm input,
+#taskForm select,
+#taskForm textarea{
+    padding:10px;
+    width:100%;
+    border:1px solid #ccc;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color .3s ease;
+}
+button:hover{
+    opacity:.9;
+}
+
+#saveBtn {
+  background-color: #007bff;
+  color: white;
+}
+
+#resetBtn {
+  background-color: #dc3545;
+  color: white;
+}
+label {
+    font-size: 0.9rem;
+}
+
+input,
+select,
+textarea {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+}
+
+button {
+    font-size: 0.9rem;
+    padding: 8px 14px;
+}
+.ActiveTask,
+.completedTask{
+    background: white;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+    margin-top:15px;
+}
+th{
+    background-color:#f8fafc;
+    padding:12px;
+    text-align:left;
+    font-size:0.85rem;
+    font-weight:600;
+    color:#475569;
+    border-bottom:1px solid #e2e8f0;
+}
+td{
+    padding:12px;
+    border-bottom:1px solid #e2e8f0;
+    font-size:0.9rem;
+}
+.priority-high{
+    color: #dc2626;
+    font-weight: 600;
+}
+.priority-medium{
+    color: #d97706;
+    font-weight: 600;
+}
+.priority-low{
+    color: #b1e52f;
+    font-weight: 600;
+}.status-completed{
+    color:#16a34a;
+    font-weight:600;
+}
+.status-in-progress{
+    color:#2563eb;
+    font-weight:600;
+}
+.status-not-started{
+    color:#6b7280;
+    font-weight:600;
+}
+.action-buttons{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+    align-items:center;
+}
+.complete-btn,
+.edit-btn,
+.delete-btn{
+    color:white;
+    border:0.5px solid black;
+    padding:6px 12px;
+    border-radius:5px;
+    cursor:pointer;
+    width:90px;
+    margin:6px;
+}
+.complete-btn{
+    background-color:#16a34a;
+}
+.edit-btn{
+    background-color:#2563eb;
+}
+.delete-btn{
+    background-color:#dc2626;
+}
+h2{
+    cursor:pointer;
+    user-select:none;
+}
+h2:hover{
+    color:#2563eb;
+}
+/* =========================
+   Responsive Design
+========================= */
+/* Large Tablets / Small Laptops */
+@media (max-width: 1024px){
+    .main-content{
+        padding:12px;
+    }
+    .dashboard{
+        gap:15px;
+    }
+    .dashboard-card{
+        max-width:250px;
+    }
+   table{
+        font-size:0.85rem;
+    }
+    th,
+    td{
+        padding:10px;
+    }
+}
+/* Tablets */
+@media (max-width: 768px){
+    body{
+        margin:3px;
+    }
+    header{
+        padding:12px;
+    }
+    header h1{
+        font-size:1.3rem;
+        text-align:center;
+    }
+    .dashboard{
+        flex-direction:column;
+        gap:15px;
+    }
+    .dashboard-card{
+        width:90%;
+        max-width:none;
+    }
+    .controls{
+        flex-direction:column;
+        align-items:stretch;
+    }
+    .controls #addBtn,
+    #searchInput,
+    #statusFilter,
+    #priorityFilter{
+        width:100%;
+        box-sizing:border-box;
+    }
+    .addTaskForm{
+        padding:15px;
+        margin:15px auto;
+    }
+    .ActiveTask,
+    .completedTask{
+        padding:15px;
+        overflow-x:auto;
+    }
+    table{
+        min-width:800px;
+    }
+    .action-buttons{
+        flex-direction:row;
+        justify-content:center;
+    }
+}
+/* Mobile Phones */
+@media (max-width: 480px){
+    .main-content{
+        padding:8px;
+    }
+    header h1{
+        font-size:1.1rem;
+    }
+    .dashboard-card{
+        padding:10px;
+    }
+    .dashboard-card h3{
+        font-size:0.9rem;
+    }
+    .dashboard-card p{
+        font-size:1.5rem;
+    }
+    .addTaskForm{
+        width:95%;
+        padding:12px;
+    }
+    #taskForm input,
+    #taskForm select,
+    #taskForm textarea{
+        font-size:0.85rem;
+        padding:8px;
+    }
+    button{
+        width:100%;
+        padding:10px;
+    }
+    .complete-btn,
+    .edit-btn,
+    .delete-btn{
+        width:75px;
+        padding:5px;
+        font-size:0.8rem;
+    }
+    th,
+    td{
+        font-size:0.75rem;
+        padding:8px;
+    }
+}
+/* Very Small Phones */
+@media (max-width: 360px){
+    header h1{
+        font-size:1rem;
+    }
+    .dashboard-card p{
+        font-size:1.3rem;
+    }
+    .ActiveTask,
+    .completedTask{
+        padding:10px;
+    }
+    .complete-btn,
+    .edit-btn,
+    .delete-btn{
+        width:65px;
+        font-size:0.7rem;
+    }
+}
