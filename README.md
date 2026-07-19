@@ -71,7 +71,8 @@ This project helped me strengthen my understanding of:
 ## 📸 Screenshots
 
 <img width="1723" height="760" alt="img 1" src="https://github.com/user-attachments/assets/c864b8c8-3f34-4031-9786-e7b638a0cd28" />
-
+<img width="1384" height="715" alt="img 2" src="https://github.com/user-attachments/assets/14b60061-9702-4d41-9e1a-a7d714f09f9a" />
+<img width="1498" height="838" alt="img 3" src="https://github.com/user-attachments/assets/3f5c2970-236d-4d6e-bcb7-932008ebfa7e" />
 
 ---
 
