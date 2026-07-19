@@ -70,7 +70,8 @@ This project helped me strengthen my understanding of:
 
 ## 📸 Screenshots
 
-(Add screenshots of your project here)
+<img width="1723" height="760" alt="img 1" src="https://github.com/user-attachments/assets/c864b8c8-3f34-4031-9786-e7b638a0cd28" />
+
 
 ---
 
